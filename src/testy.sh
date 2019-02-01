@@ -5,6 +5,9 @@
 # pink_white_blue00.txt --> red_white_blue00.txt  
 # pink_white_blue01.txt --> red_white_blue01.txt 
 
+
+# --> Offer a preview of what's in the current directory here? <--
+
 # File type to be modified, e.g. .csv, .json, .txt.
 
 input_file_type() {
