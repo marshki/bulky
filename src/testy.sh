@@ -1,16 +1,15 @@
 #!/bin/bash 
 # mjk235 [at] nyu [dot] edu
 
-# Iterate through files, replacing user designated string, e.g.:  
+# Iterate through files, replacing user designated string for file type, e.g.:  
 # pink_white_blue00.txt --> red_white_blue00.txt  
-# pink_white_blue00.csv --> red_white_blue00.csv
 # pink_white_blue01.txt --> red_white_blue01.txt 
-# pink_white_blue01.csv --> red_white_blue01.txt 
 
 # File type to be modified, e.g. .csv, .json, .txt.
 
 input_file_type() {
-  read -p "Enter the file type of the files you want to modify: " file_type
+  printf "%s\n" "File extensions look like this: csv, json, txt." 
+  read -p "Enter the extension of the files you want to modify: " file_type
 } 
 
 # String to search for.  
@@ -63,7 +62,7 @@ bulk_rename() {
 
 # Main 
 
-printf "%s\n" "Bulky: A Bash script to rename files en masse."
+printf "%s\n" "Bulky: A shell script to rename files en masse."
 
 main() {
   input_file_type
@@ -75,7 +74,3 @@ main() {
 } 
 
 main "$@" 
-
-#### One-liners, e.g.:  #### 
-#for f in SF_spDist1*; do mv "$f" "${f/SF_spDist1/SF2}";done
-#for f in SF2*; do mv "$f" "${f/SF2/SF_spDist1}";done
