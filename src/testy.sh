@@ -5,7 +5,14 @@
 # pink_white_blue00.txt --> red_white_blue00.txt  
 # pink_white_blue01.txt --> red_white_blue01.txt 
 
-# --> Offer a preview of what's in the current directory here? <--
+# Preview files in current working directory.  
+
+show_files() {
+  printf "%s\n" "Files in your current directory: " 
+  sleep 1.5
+
+  ls -Cp |grep --invert-match /
+} 
 
 # Define file type to be modified, e.g. .csv, .json, .txt.
 
@@ -66,6 +73,7 @@ bulk_rename() {
 printf "%s\n" "Bulky: A shell script to rename files en masse."
 
 main() {
+  show_files
   input_file_type
   input_to_find
   input_to_replace 
