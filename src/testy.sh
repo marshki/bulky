@@ -1,33 +1,32 @@
 #!/bin/bash 
 # mjk235 [at] nyu [dot] edu
 
-# Iterate through files, replacing user designated string for file type, e.g.:  
+# Iterate through files, finding and replacing string for files of type, e.g.:  
 # pink_white_blue00.txt --> red_white_blue00.txt  
 # pink_white_blue01.txt --> red_white_blue01.txt 
 
-
 # --> Offer a preview of what's in the current directory here? <--
 
-# File type to be modified, e.g. .csv, .json, .txt.
+# Define file type to be modified, e.g. .csv, .json, .txt.
 
 input_file_type() {
   printf "%s\n" "File extensions look like this: csv, json, txt." 
   read -p "Enter the extension of the files you want to modify: " file_type
 } 
 
-# String to search for.  
+# Define string to search for.  
 
 input_to_find() {
   read -p "Enter the string to find: " find_string 
 } 
 
-# String to replace. 
+# Define string to replace. 
 
 input_to_replace() {
   read -p "Enter the string to replace: " replace_string 
 } 
 
-# Preview of changes.  
+# Preview changes.  
 
 preview_changes() {
   printf "%s\n" "Generating preview..."
@@ -37,10 +36,10 @@ preview_changes() {
   done
 } 
 
-# Read user input; exit if not Y or y.  
+# Confirm changes are acceptable; exit if not Y or y.  
 
 confirm_changes() { 
-  read -p "Confirm change from:'$find_string' to:'$replace_string'(y/n)? " answer 
+  read -p "Replace:'$find_string' with:'$replace_string'(y/n)? " answer 
    
   if [ "$answer" != "${answer#[Yy]}" ]; then
       printf "%s\n" "Continuing..."
@@ -50,8 +49,7 @@ confirm_changes() {
   fi
 } 
 
-# Rename each file beginning with "find_string*", 
-# replacing "find_string" with "replace_string" using mv.
+# Replace "find_string" with "replace_string" using mv for files of "file_type"
 
 bulk_rename() {
   printf "%s\n" "Renaming files..."
