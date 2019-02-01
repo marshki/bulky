@@ -1,3 +1,3 @@
 # bulky
 
-Bash shell script to rename files en masse. WIP.  
+Shell script to rename files en masse. WIP.  
