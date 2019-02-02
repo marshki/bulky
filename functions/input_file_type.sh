@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 # Prompt to define file type.  
-# If present, strip ".". 
+# If present, strip "." then reassign output to file_type 
 
 input_file_type() { 
   printf "%s\n" "File extensions look like this: csv, json, txt." 
