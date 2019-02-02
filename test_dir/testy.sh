@@ -1,14 +1,17 @@
 #!/bin/bash 
 # mjk235 [at] nyu [dot] edu
+# Shell script to rename files en masse. 
 
-# Iterate through files, finding and replacing string for files of type, e.g.:  
+# Bulky will replace first occurrence of: x with y in file names, e.g.:  
 # pink_white_blue00.txt --> red_white_blue00.txt  
-# pink_white_blue01.txt --> red_white_blue01.txt 
+# pink_white_blue01.txt --> red_white_blue01.txt , or: 
+# somefile_101.txt --> somefile_00.html
+# somefile_102.txt --> somefile_00.html
 
-# Preview files in current working directory.  
+# Show files in current working directory.  
 
 show_files() {
-  printf "%s\n" "Files in your current directory: " 
+  printf "%s\n" "Files in current directory: " 
   sleep 1.5
 
   ls -Cp |grep --invert-match /
@@ -19,6 +22,8 @@ show_files() {
 input_file_type() {
   printf "%s\n" "File extensions look like this: csv, json, txt." 
   read -p "Enter the extension of the files you want to modify: " file_type
+
+  file_type="${file_type//.}"
 } 
 
 # Define string to search for.  
