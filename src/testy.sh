@@ -5,10 +5,10 @@
 # pink_white_blue00.txt --> red_white_blue00.txt  
 # pink_white_blue01.txt --> red_white_blue01.txt 
 
-# Preview files in current working directory.  
+# Show files in current working directory.  
 
 show_files() {
-  printf "%s\n" "Files in your current directory: " 
+  printf "%s\n" "Files in current directory: " 
   sleep 1.5
 
   ls -Cp |grep --invert-match /
