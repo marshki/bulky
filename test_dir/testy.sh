@@ -2,7 +2,7 @@
 # mjk235 [at] nyu [dot] edu
 # Shell script to rename files en masse. 
 
-# Bulky will replace first occurrence of: x with y in file names, e.g.:  
+# Bulky will replace the first occurrence of: x with y in file names, e.g.:  
 # pink_white_blue00.txt --> red_white_blue00.txt  
 # pink_white_blue01.txt --> red_white_blue01.txt , or: 
 # somefile_101.txt --> somefile_00.html
