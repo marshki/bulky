@@ -8,7 +8,7 @@ input_file_type() {
 
   read -p "Enter the extension of the files to be modified: " file_type
 
-  file_type="${file_type//.}"
+  file_type=${file_type//.}
   printf "%s\n" "$file_type" 
  
 } 
