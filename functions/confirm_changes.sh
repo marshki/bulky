@@ -5,7 +5,7 @@
 # Even though we ask for "YES" we will accept, e.g. yes, YeS, yeS. 
 
 confirm_changes() { 
-  read -p "Replace: 'this' with: 'that'(Yes/No)? " answer 
+  read -p "Replace: 'this' with: 'that'(YES/NO)? " answer 
 
   answer=$(printf "%s" "$answer"| tr '[:upper:]' '[:lower:]')
 
