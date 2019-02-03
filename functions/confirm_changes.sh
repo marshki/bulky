@@ -1,12 +1,13 @@
 #!/bin/bash 
 
-# Prompt user for confirmation. 
-# Exit if input not yes 
-# --> maybe strip Yes to lower case to be acceptable as well
-# --> script should probably loop back if not yes 
+# Prompt user for confirmation; exit if not "yes"
+# Pipe reply to tr to convert to lower case . 
+# Even though we ask for "YES" we will accept, e.g. yes, YeS, yeS. 
 
 confirm_changes() { 
-  read -p "Replace: 'this' with: 'that'(yes/no)? " answer 
+  read -p "Replace: 'this' with: 'that'(Yes/No)? " answer 
+
+  answer=$(printf "%s" "$answer"| tr '[:upper:]' '[:lower:]')
 
   if [[ "$answer" = "yes" ]]; then
       printf "%s\n" "Continuing..."
