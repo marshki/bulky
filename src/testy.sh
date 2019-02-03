@@ -5,8 +5,8 @@
 # Bulky will replace the first occurrence of: x with y in file names, e.g.:  
 # pink_white_blue00.txt --> red_white_blue00.txt  
 # pink_white_blue01.txt --> red_white_blue01.txt , or: 
-# somefile_101.txt --> somefile_00.html
-# somefile_102.txt --> somefile_00.html
+# somefile_101.txt --> somefile_101.html
+# somefile_102.txt --> somefile_102.html
 
 # Show files in current working directory.  
 
@@ -23,7 +23,7 @@ input_file_type() {
   printf "%s\n" "File extensions look like this: csv, json, txt." 
   read -p "Enter the extension of the files you want to modify: " file_type
 
-  file_type="${file_type//.}"
+  file_type=${file_type//.}
 } 
 
 # Define string to search for.  
@@ -51,9 +51,11 @@ preview_changes() {
 # Confirm changes are acceptable; exit if not Y or y.  
 
 confirm_changes() { 
-  read -p "Replace:'$find_string' with:'$replace_string'(y/n)? " answer 
+  read -p "Replace:'$find_string' with:'$replace_string'(YES/NO)? " answer 
+
+  answer=$(printf "%s" "$answer" | tr '[:upper:]' '[:lower:]')
    
-  if [ "$answer" != "${answer#[Yy]}" ]; then
+  if [[ "$answer" = "yes" ]]; then
       printf "%s\n" "Continuing..."
   else
       printf "%s\n" "Exiting." 
