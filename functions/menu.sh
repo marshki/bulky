@@ -15,8 +15,8 @@ function show_menu() {
     printf "%s\\n" "------------------------------"
     printf "%s\\n" "  Main Menu                   "
     printf "%s\\n" "------------------------------"
-        printf "%s\\n" "  1. RENAME FILES BY EXTENSION"
-        printf "%s\\n" "  2. RENAME FILES BY STRING"
+        printf "%s\\n" "  1. BULK RENAME BY EXTENSION"
+        printf "%s\\n" "  2. BULK RENAME BY STRING"
         printf "%s\\n" "  3. EXIT"
 }
 
