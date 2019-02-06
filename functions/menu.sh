@@ -13,7 +13,7 @@ function pause() {
 function show_menu() {
     date
     printf "%s\\n" "------------------------------"
-    printf "%s\\n" "  Main Menu                   "
+    printf "%s\\n" "  Bulky Main Menu             "
     printf "%s\\n" "------------------------------"
         printf "%s\\n" "  1. BULK RENAME BY EXTENSION"
         printf "%s\\n" "  2. BULK RENAME BY STRING"
