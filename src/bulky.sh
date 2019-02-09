@@ -38,7 +38,7 @@ preview_changes() {
   done
 } 
 
-# Confirm changes are acceptable; exit if not Y or y.  
+# Confirm changes are acceptable; exit if not yes.  
 
 confirm_changes() { 
   read -p "Replace:'$find_string' with:'$replace_string'(YES/NO)? " answer 
