@@ -22,13 +22,13 @@ input_to_find() {
   read -p "Enter the string to find: " find_string 
 } 
 
-# Read user input & assign to: `replace_string`. 
+# Define string to search for.  
 
 input_to_replace() {
   read -p "Enter the string to replace: " replace_string 
 } 
 
-# Preview changes to be made.  
+# Preview changes.  
 
 preview_changes() {
   printf "%s\n" "Generating preview..."
@@ -38,12 +38,12 @@ preview_changes() {
   done
 } 
 
-# Read user input; exit if not Y or y.  
+# Confirm changes are acceptable; exit if not Y or y.  
 
 confirm_changes() { 
-  read -p "Confirm change from:'$find_string' to:'$replace_string'(y/n)? " answer 
+  read -p "Replace:'$find_string' with:'$replace_string'(YES/NO)? " answer 
    
-  if [ "$answer" != "${answer#[Yy]}" ]; then
+  if [[ "$answer" = "yes" ]]; then
       printf "%s\n" "Continuing..."
   else
       printf "%s\n" "Exiting." 
