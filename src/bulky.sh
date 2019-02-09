@@ -51,8 +51,7 @@ confirm_changes() {
   fi
 } 
 
-# Rename each file beginning with "find_string*", 
-# replacing "find_string" with "replace_string" using mv.
+# Replace "find_string" with "replace_string" using mv for files. 
 
 bulk_rename() {
   printf "%s\n" "Renaming files..."
@@ -66,7 +65,7 @@ bulk_rename() {
 
 # Main 
 
-printf "%s\n" "Bulky: A Bash script to rename files en masse."
+printf "%s\n" "BULKY: A Bash script to rename files en masse."
 
 main() {
   input_to_find
