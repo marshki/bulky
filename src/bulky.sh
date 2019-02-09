@@ -1,11 +1,22 @@
 #!/bin/bash 
 # mjk235 [at] nyu [dot] edu
 
-# Iterate through files, replacing user designated string, e.g.:  
+# BULKY will replace the first occurrence of: x with y in file names, e.g.: 
 # orange_white_blue00.txt --> red_white_blue00.txt  
 # orange_white_blue00.csv --> red_white_blue00.csv
 # orange_white_blue01.txt --> red_white_blue01.txt 
 # orange_white_blue01.csv --> red_white_blue01.txt 
+
+# Show files in current working directory. 
+
+show_files() { 
+  printf "%s\n" "Files in current directory: "
+  sleep 1.5 
+
+  ls -Cp |grep --invert-match / 
+} 
+
+# Define string to search for. 
 
 input_to_find() {
   read -p "Enter the string to find: " find_string 
