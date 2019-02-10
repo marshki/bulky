@@ -76,10 +76,10 @@ input_to_replace() {
 # Preview changes for bulk rename by string.   
 
 # Rename by string will find and replace first occurrence of string in all files, e.g.:
-# orange_white_blue00.txt --> red_white_blue00.txt  
-# orange_white_blue00.csv --> red_white_blue00.csv
-# orange_white_blue01.txt --> red_white_blue01.txt 
-# orange_white_blue01.csv --> red_white_blue01.txt 
+# pink_white_blue00.txt --> red_white_blue00.txt  
+# pink_white_blue00.csv --> red_white_blue00.csv
+# pink_white_blue01.txt --> red_white_blue01.txt 
+# pink_white_blue01.csv --> red_white_blue01.txt 
  
 preview_string_rename() {
   printf "%s\n" "Generating preview..."
@@ -92,10 +92,10 @@ preview_string_rename() {
 # Preview changes for bulk rename by type. 
 
 # Rename by type will find and replace first occurrence of string if all files of x type, e.g.: 
-# orange_white_blue00.txt --> red_white_blue00.txt  
-# orange_white_blue00.csv --> orange_white_blue00.csv
-# orange_white_blue01.txt --> red_white_blue01.txt 
-# orange_white_blue01.csv --> orange_white_blue01.txt 
+# pink_white_blue00.txt --> red_white_blue00.txt  
+# pink_white_blue00.csv --> orange_white_blue00.csv
+# pink_white_blue01.txt --> red_white_blue01.txt 
+# pink_white_blue01.csv --> orange_white_blue01.txt 
 
 preview_type_rename() {
   printf "%s\n" "Generating preview..."
