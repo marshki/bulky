@@ -1,14 +1,11 @@
 #!/bin/bash 
 # mjk235 [at] nyu [dot] edu
 
-#### BULKY will replace the first occurrence of: x with y in file names. ####
- 
-# orange_white_blue00.txt --> red_white_blue00.txt  
-# orange_white_blue00.csv --> red_white_blue00.csv
-# orange_white_blue01.txt --> red_white_blue01.txt 
-# orange_white_blue01.csv --> red_white_blue01.txt 
+#### BULKY: A SHELL SCRIPT TO RENAME FILES EN MASSE. #### 
 
-#### Pause function.  ####
+#### MENU ####
+
+# Pause function. 
 
 function pause() {
     local message="$@"
@@ -16,20 +13,35 @@ function pause() {
     read -rp "$message" readEnterKey
 }
 
-#### Display on-screen menu. ####
+# On-screen menu.
 
 function show_menu() {
     date
     printf "%s\\n" "------------------------------"
-    printf "%s\\n" "  Main Menu                   "
+    printf "%s\\n" "  BULKY: Main Menu            "
     printf "%s\\n" "------------------------------"
-        printf "%s\\n" "  1. BULK RENAME BY STRING"
-        printf "%s\\n" "  2. BULK RENAME BY EXTENSION"
-        printf "%s\\n" "  3. EXIT"
+        printf "%s\\n" "  1. Rename files by string"
+        printf "%s\\n" "  2. Rename files by type"
+        printf "%s\\n" "  3. Exit"
 }
 
+# Get input via keyboard and make a decision using case...esac. 
 
-#### Meat & Potatoes #### 
+function read_input() {
+    local c
+    read -rp "Enter your choice [ 1-3 ]:  " c
+    case $c in
+        1) bulky_by_string ;;
+        2) bulky_by_type ;;
+        3) printf "%s\\n" "Ciao!"; exit 0 ;;
+        *)
+           printf "%s\\n" "Select an Option (1 to 3):  "
+
+           pause
+    esac
+}
+
+#### BULKY #### 
 
 # Show files in current working directory. 
 
@@ -40,7 +52,7 @@ show_files() {
   ls -Cp |grep --invert-match / 
 } 
 
-# Define file type to be modified, e.g. .csv, .json, .txt.
+# Define file type to be modified, e.g. .csv, .html, .json, .txt.
 
 input_file_type() {
   printf "%s\n" "File extensions look like this: csv, json, txt." 
@@ -49,13 +61,13 @@ input_file_type() {
   file_type=${file_type//.}
 } 
 
-# Define string to search for. 
+# Define string to find. 
 
 input_to_find() {
   read -p "Enter the string to find: " find_string 
 } 
 
-# Define string to search for.  
+# Define string to replace.  
 
 input_to_replace() {
   read -p "Enter the string to replace: " replace_string 
@@ -63,7 +75,7 @@ input_to_replace() {
 
 # Preview changes for bulk rename by string.   
 
-preview_bulk_changes() {
+preview_string_rename() {
   printf "%s\n" "Generating preview..."
  
   for file in $find_string*; do 
@@ -73,7 +85,7 @@ preview_bulk_changes() {
 
 # Preview changes for bulk rename by type. 
 
-preview_type_changes() {
+preview_type_rename() {
   printf "%s\n" "Generating preview..."
  
   for file in *$file_type; do 
@@ -96,7 +108,7 @@ confirm_changes() {
 
 # Replace "find_string" with "replace_string" using mv for files. 
 
-bulk_rename() {
+string_rename() {
   printf "%s\n" "Renaming files..."
  
   for file in $find_string*; do 
@@ -106,6 +118,8 @@ bulk_rename() {
   printf "%s\n" "Done."
 } 
 
+# Replace "find_string" with "replace_string" using mv for files of type x
+ 
 type_rename() {
   printf "%s\n" "Renaming files..."
  
@@ -116,46 +130,28 @@ type_rename() {
   printf "%s\n" "Done."
 }
 
-#### BULKY ####
-
-bulky() { 
+bulky_by_string() { 
   show_files
   input_to_find 
   input_to_replace
-  preview_bulk_changes
+  preview_string_rename
   confirm_changes
-  bulk_rename
+  string_rename
 } 
 
-typey() {
+bulky_by_type() {
   show_files
   input_file_type
   input_to_find
   input_to_replace 
-  preview_type_changes
+  preview_type_rename
   confirm_changes
   type_rename
 } 
 
-#### Get input via the keyboard and make a decision using case...esac ####
+#### Main #### 
 
-function read_input() {
-    local c
-    read -rp "Enter your choice [ 1-3 ]:  " c
-    case $c in
-        1) bulky ;;
-        2) typey ;;
-        3) printf "%s\\n" "Ciao!"; exit 0 ;;
-        *)
-           printf "%s\\n" "Select an Option (1 to 3):  "
-
-           pause
-    esac
-}
-
-# Main 
-
-printf "%s\n" "BULKY: A Bash script to rename files en masse."
+printf "%s\n" "BULKY: A SHELL SCRIPT TO RENAME FILES EN MASSE."
 
 main() {
 
@@ -167,4 +163,11 @@ main() {
   done 
 } 
 
-main "$@" 
+main "$@"
+
+# will replace the first occurrence of: x with y in file names. ####
+ 
+# orange_white_blue00.txt --> red_white_blue00.txt  
+# orange_white_blue00.csv --> red_white_blue00.csv
+# orange_white_blue01.txt --> red_white_blue01.txt 
+# orange_white_blue01.csv --> red_white_blue01.txt 
