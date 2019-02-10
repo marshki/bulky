@@ -91,7 +91,7 @@ preview_string_rename() {
 
 # Preview changes for bulk rename by type. 
 
-# Rename by type will find and replace first occurrence of strgin if all files of x type, e.g.: 
+# Rename by type will find and replace first occurrence of string if all files of x type, e.g.: 
 # orange_white_blue00.txt --> red_white_blue00.txt  
 # orange_white_blue00.csv --> orange_white_blue00.csv
 # orange_white_blue01.txt --> red_white_blue01.txt 
