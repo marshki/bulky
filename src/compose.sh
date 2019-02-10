@@ -169,7 +169,7 @@ bulky_by_type() {
 
 main() {
 
-printf "%s\n" "BULKY: A SHELL SCRIPT TO RENAME FILES EN MASSE."
+printf "%s\n" "BULKY: A shell script to rename files en masse."
 pause 
 
   while true 
