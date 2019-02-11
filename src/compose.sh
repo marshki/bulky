@@ -169,8 +169,9 @@ bulky_by_type() {
 #### MAIN #### 
 
 main() {
-
 printf "%s\n" "BULKY: A shell script to rename files en masse."
+printf "%s\n" "BULKY searches for and replaces the first occurrence of a string in" 
+printf "%s\n" "all files (by string), or all files ending with an extension (by type)."  
 
 pause 
 
