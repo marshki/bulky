@@ -1,7 +1,21 @@
 #!/bin/bash 
 # mjk235 [at] nyu [dot] edu
 
-#### BULKY: A SHELL SCRIPT TO RENAME FILES EN MASSE. #### 
+#### BULKY: A shell script to rename files en masse. #### 
+
+#### Usage ####
+
+# Rename by string will find and replace the first occurrence of a string 
+# in all files, e.g.:
+# pink_white_blue_00.csv --> red_white_blue_00.csv
+# pink_white_blue_00.html --> red_white_blue_00.html 
+# pink_white_blue_00.txt --> red_white_blue_00.txt 
+
+# Rename by type will find and replace first occurrence of a string 
+# in all files of x type, e.g.: 
+# pink_white_blue_00.txt --> red_white_blue_00.txt  
+# pink_white_blue_01.txt --> red_white_blue_01.txt 
+# pink_white_blue_02.txt --> red_white_blue_02.txt 
 
 #### MENU ####
 
@@ -55,7 +69,6 @@ show_files() {
 # Define file type to be modified, e.g. .csv, .html, .json, .txt.
 
 input_file_type() {
-  printf "%s\n" "File extensions look like this: csv, json, txt." 
   read -p "Enter the extension of the files you want to modify: " file_type
 
   file_type=${file_type//.}
@@ -74,12 +87,6 @@ input_to_replace() {
 } 
 
 # Preview changes for bulk rename by string.   
-
-# Rename by string will find and replace first occurrence of string in all files, e.g.:
-# pink_white_blue00.txt --> red_white_blue00.txt  
-# pink_white_blue00.csv --> red_white_blue00.csv
-# pink_white_blue01.txt --> red_white_blue01.txt 
-# pink_white_blue01.csv --> red_white_blue01.txt 
  
 preview_string_rename() {
   printf "%s\n" "Generating preview..."
@@ -90,12 +97,6 @@ preview_string_rename() {
 } 
 
 # Preview changes for bulk rename by type. 
-
-# Rename by type will find and replace first occurrence of string if all files of x type, e.g.: 
-# pink_white_blue00.txt --> red_white_blue00.txt  
-# pink_white_blue00.csv --> orange_white_blue00.csv
-# pink_white_blue01.txt --> red_white_blue01.txt 
-# pink_white_blue01.csv --> orange_white_blue01.txt 
 
 preview_type_rename() {
   printf "%s\n" "Generating preview..."
@@ -144,7 +145,7 @@ type_rename() {
   printf "%s\n" "Done."
 }
 
-# WRAPPERS 
+#### Wrappers ####
 
 bulky_by_string() { 
   show_files
@@ -170,6 +171,7 @@ bulky_by_type() {
 main() {
 
 printf "%s\n" "BULKY: A shell script to rename files en masse."
+
 pause 
 
   while true 
