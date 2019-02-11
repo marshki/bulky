@@ -51,7 +51,7 @@ show_files() {
   ls -Cp |grep --invert-match / 
 } 
 
-# Define file type to be modified, e.g. .csv, .html, .json, .txt.
+# Define file type to search for, e.g. .csv, .html, .json, .txt.
 
 input_file_type() {
   read -p "Enter the extension of the files you want to modify: " file_type
@@ -71,7 +71,7 @@ input_to_replace() {
   read -p "Enter the string to replace: " replace_string 
 } 
 
-# Preview changes for bulk rename by string.   
+# Preview changes for bulk rename by string starts with.
  
 preview_string_rename() {
   printf "%s\n" "Generating preview..."
@@ -158,7 +158,9 @@ main() {
 cat << EOF
 "BULKY: A shell script to rename files en masse." 
 
-BULKY searches for and replaces the first occurrence of a string in all files (by string), e.g.:  
+BULKY searches for and replaces the first occurrence of a string in all files  
+
+that begin with a search term (by string), e.g.:  
 
 pink_white_blue_00.csv --> red_white_blue_00.csv
 pink_white_blue_00.html --> red_white_blue_00.html 
