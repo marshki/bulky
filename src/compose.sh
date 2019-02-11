@@ -1,21 +1,6 @@
 #!/bin/bash 
 # mjk235 [at] nyu [dot] edu
-
-#### BULKY: A shell script to rename files en masse. #### 
-
-#### Usage ####
-
-# Rename by string will find and replace the first occurrence of a string 
-# in all files, e.g.:
-# pink_white_blue_00.csv --> red_white_blue_00.csv
-# pink_white_blue_00.html --> red_white_blue_00.html 
-# pink_white_blue_00.txt --> red_white_blue_00.txt 
-
-# Rename by type will find and replace first occurrence of a string 
-# in all files of x type, e.g.: 
-# pink_white_blue_00.txt --> red_white_blue_00.txt  
-# pink_white_blue_01.txt --> red_white_blue_01.txt 
-# pink_white_blue_02.txt --> red_white_blue_02.txt 
+# BULKY: A shell script to rename files en masse. 
 
 #### MENU ####
 
@@ -145,7 +130,7 @@ type_rename() {
   printf "%s\n" "Done."
 }
 
-#### Wrappers ####
+#### WRAPPERS ####
 
 bulky_by_string() { 
   show_files
@@ -169,9 +154,23 @@ bulky_by_type() {
 #### MAIN #### 
 
 main() {
-printf "%s\n" "BULKY: A shell script to rename files en masse."
-printf "%s\n" "BULKY searches for and replaces the first occurrence of a string in" 
-printf "%s\n" "all files (by string), or all files ending with an extension (by type)."  
+
+cat << EOF
+"BULKY: A shell script to rename files en masse." 
+
+BULKY searches for and replaces the first occurrence of a string in all files (by string), e.g.:  
+
+pink_white_blue_00.csv --> red_white_blue_00.csv
+pink_white_blue_00.html --> red_white_blue_00.html 
+pink_white_blue_00.txt --> red_white_blue_00.txt 
+
+or all files ending with an extension (by type), e.g.: 
+
+pink_white_blue_00.txt --> red_white_blue_00.txt  
+pink_white_blue_01.txt --> red_white_blue_01.txt 
+pink_white_blue_02.txt --> red_white_blue_02.txt 
+
+EOF
 
 pause 
 
