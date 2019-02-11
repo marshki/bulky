@@ -1,6 +1,5 @@
 #!/bin/bash 
 # mjk235 [at] nyu [dot] edu
-# BULKY: A shell script to rename files en masse. 
 
 #### MENU ####
 
@@ -154,12 +153,10 @@ bulky_by_type() {
 #### MAIN #### 
 
 main() {
-
-cat << EOF
-"BULKY: A shell script to rename files en masse." 
+  cat << EOF
+BULKY: A shell script to rename files en masse. 
 
 BULKY searches for and replaces the first occurrence of a string in all files  
-
 that begin with a search term (by string), e.g.:  
 
 pink_white_blue_00.csv --> red_white_blue_00.csv
@@ -173,8 +170,7 @@ pink_white_blue_01.txt --> red_white_blue_01.txt
 pink_white_blue_02.txt --> red_white_blue_02.txt 
 
 EOF
-
-pause 
+  pause 
 
   while true 
   do 
