@@ -32,8 +32,9 @@ input_to_replace() {
 
 preview_changes() {
   printf "%s\n" "Generating preview..."
- 
-  for file in $find_string*; do 
+
+  #for file in $find_string*; do  
+  for file in *; do 
     printf "%s %s \n" "$file" "-->" "${file/$find_string/$replace_string}" 
   done
 } 
