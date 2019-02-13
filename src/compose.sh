@@ -19,7 +19,7 @@ function show_menu() {
     printf "%s\\n" "  BULKY: Main Menu            "
     printf "%s\\n" "------------------------------"
         printf "%s\\n" "  1. Rename files by string"
-        printf "%s\\n" "  2. Rename files of type"
+        printf "%s\\n" "  2. Rename files by extension"
         printf "%s\\n" "  3. Exit"
 }
 
@@ -105,7 +105,7 @@ confirm_changes() {
   fi
 } 
 
-# Replace "find_string" with "replace_string" using mv for files. 
+# Replace 1st occurrence of "find_string" with "replace_string" in all files. 
 
 string_rename() {
   printf "%s\n" "Renaming files..."
@@ -117,8 +117,9 @@ string_rename() {
   printf "%s\n" "Done."
 } 
 
-# Replace "find_string" with "replace_string" using mv for files of type x
- 
+# Replace 1st occurrence of "find_string" with "replace_string" using mv for 
+# files of defined extenstion.  
+
 type_rename() {
   printf "%s\n" "Renaming files..."
  
