@@ -155,16 +155,22 @@ bulky_by_type() {
 
 main() {
   cat << EOF
+
 BULKY: A shell script to rename files en masse. 
-BULKY searches for and replaces the first occurrence of a string in all files  
-that BEGIN with a search term (by string), e.g.:  
+
+BULKY finds and replaces the FIRST occurrence of a string in ALL files  
+that MATCH a search term (by string), e.g.:  
+
 pink_white_blue_00.csv --> red_white_blue_00.csv
 pink_white_blue_00.html --> red_white_blue_00.html 
 pink_white_blue_00.txt --> red_white_blue_00.txt 
-or all files with an extension (by type), e.g.: 
+
+or MATCH an extension AND MATCH a search term (by type), e.g.: 
+
 pink_white_blue_00.txt --> red_white_blue_00.txt  
 pink_white_blue_01.txt --> red_white_blue_01.txt 
 pink_white_blue_02.txt --> red_white_blue_02.txt 
+
 EOF
   pause 
 
