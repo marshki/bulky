@@ -30,7 +30,7 @@ function read_input() {
     read -rp "Enter your choice [ 1-3 ]:  " c
     case $c in
         1) bulky_by_string ;;
-        2) bulky_by_type ;;
+        2) bulky_by_extension ;;
         3) printf "%s\\n" "Ciao!"; exit 0 ;;
         *)
            printf "%s\\n" "Select an Option (1 to 3):  "
@@ -62,12 +62,12 @@ input_to_replace() {
   read -p "Enter the string to replace: " replace_string 
 } 
 
-# Define file type to search for, e.g. .csv, .html, .json, .txt.
+# Define file extension to search for, e.g. .csv, .html, .json, .txt.
 
-input_file_type() {
-  read -p "Enter the extension of the files you want to modify: " file_type
+input_file_extension() {
+  read -p "Enter the extension of the files you want to modify: " file_ext
 
-  file_type=${file_type//.}
+  file_ext=${file_ext//.}
 } 
 
 # Preview changes for bulk rename by find string.
@@ -80,12 +80,12 @@ preview_string_rename() {
   done
 } 
 
-# Preview changes for bulk rename by type. 
+# Preview changes for bulk rename by extension. 
 
-preview_type_rename() {
+preview_extension_rename() {
   printf "%s\n" "Generating preview..."
  
-  for file in *$file_type; do 
+  for file in *$file_ext; do 
     printf "%s %s \n" "$file" "-->" "${file/$find_string/$replace_string}" 
   done
 }
@@ -117,13 +117,13 @@ string_rename() {
   printf "%s\n" "Done."
 } 
 
-# Replace 1st occurrence of "find_string" with "replace_string" using mv for 
-# files of defined extenstion.  
+# Replace 1st occurrence of "find_string" with "replace_string"
+# for files of defined extenstion.  
 
-type_rename() {
+extension_rename() {
   printf "%s\n" "Renaming files..."
  
-  for file in *$file_type ; do 
+  for file in *$file_ext ; do 
     mv -v "$file" "${file/$find_string/$replace_string}"
   done
 
@@ -141,14 +141,14 @@ bulky_by_string() {
   string_rename
 } 
 
-bulky_by_type() {
+bulky_by_extension() {
   show_files
-  input_file_type
+  input_file_extension
   input_to_find
   input_to_replace 
-  preview_type_rename
+  preview_extension_rename
   confirm_changes
-  type_rename
+  extension_rename
 } 
 
 #### MAIN #### 
@@ -165,7 +165,7 @@ pink_white_blue_00.csv --> red_white_blue_00.csv
 pink_white_blue_00.html --> red_white_blue_00.html 
 pink_white_blue_00.txt --> red_white_blue_00.txt 
 
-or MATCH an extension AND MATCH a search term (by type), e.g.: 
+or MATCH an extension AND MATCH a search term (by extension), e.g.: 
 
 pink_white_blue_00.txt --> red_white_blue_00.txt  
 pink_white_blue_01.txt --> red_white_blue_01.txt 
