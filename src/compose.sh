@@ -19,7 +19,7 @@ function show_menu() {
     printf "%s\\n" "  BULKY: Main Menu            "
     printf "%s\\n" "------------------------------"
         printf "%s\\n" "  1. Rename files by string"
-        printf "%s\\n" "  2. Rename files by type"
+        printf "%s\\n" "  2. Rename files of type"
         printf "%s\\n" "  3. Exit"
 }
 
@@ -50,14 +50,6 @@ show_files() {
   ls -Cp |grep --invert-match / 
 } 
 
-# Define file type to search for, e.g. .csv, .html, .json, .txt.
-
-input_file_type() {
-  read -p "Enter the extension of the files you want to modify: " file_type
-
-  file_type=${file_type//.}
-} 
-
 # Define string to find. 
 
 input_to_find() {
@@ -70,12 +62,20 @@ input_to_replace() {
   read -p "Enter the string to replace: " replace_string 
 } 
 
-# Preview changes for bulk rename by string starts with.
+# Define file type to search for, e.g. .csv, .html, .json, .txt.
+
+input_file_type() {
+  read -p "Enter the extension of the files you want to modify: " file_type
+
+  file_type=${file_type//.}
+} 
+
+# Preview changes for bulk rename by find string.
  
 preview_string_rename() {
   printf "%s\n" "Generating preview..."
  
-  for file in $find_string*; do 
+  for file in *; do 
     printf "%s %s \n" "$file" "-->" "${file/$find_string/$replace_string}" 
   done
 } 
@@ -110,7 +110,7 @@ confirm_changes() {
 string_rename() {
   printf "%s\n" "Renaming files..."
  
-  for file in $find_string*; do 
+  for file in *; do 
     mv -v "$file" "${file/$find_string/$replace_string}"
   done
 
