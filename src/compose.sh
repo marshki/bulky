@@ -165,7 +165,7 @@ red_white_blue_00.csv --> red_pink_blue_00.csv
 red_white_blue_00.html --> red_pink_blue_00.html 
 red_white_blue_00.txt --> red_pink_blue_00.txt 
 
-or MATCH an extension AND MATCH a search term (by extension), e.g.: 
+or that MATCH a search term (by extension) for ALL files of an extension, e.g.: 
 
 red_white_blue_00.txt --> big_red_00.txt 
 red_white_blue_01.txt --> big_red_01.txt
