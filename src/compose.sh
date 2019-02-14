@@ -118,7 +118,7 @@ string_rename() {
 } 
 
 # Replace 1st occurrence of "find_string" with "replace_string"
-# for files of defined extenstion.  
+# for files of defined extension.  
 
 extension_rename() {
   printf "%s\n" "Renaming files..."
@@ -161,15 +161,15 @@ BULKY: A shell script to rename files en masse.
 BULKY finds and replaces the FIRST occurrence of a string in ALL files  
 that MATCH a search term (by string), e.g.:  
 
-pink_white_blue_00.csv --> red_white_blue_00.csv
-pink_white_blue_00.html --> red_white_blue_00.html 
-pink_white_blue_00.txt --> red_white_blue_00.txt 
+red_white_blue_00.csv --> red_pink_blue_00.csv
+red_white_blue_00.html --> red_pink_blue_00.html 
+red_white_blue_00.txt --> red_pink_blue_00.txt 
 
 or MATCH an extension AND MATCH a search term (by extension), e.g.: 
 
-pink_white_blue_00.txt --> red_white_blue_00.txt  
-pink_white_blue_01.txt --> red_white_blue_01.txt 
-pink_white_blue_02.txt --> red_white_blue_02.txt 
+red_white_blue_00.txt --> big_red_00.txt 
+red_white_blue_01.txt --> big_red_01.txt
+red_white_blue_02.txt --> big_red_02.txt
 
 EOF
   pause 
