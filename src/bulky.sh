@@ -6,7 +6,7 @@
 # Pause function. 
 
 function pause() {
-    local message="$@"
+    local message="$*"
     [ -z "$message" ] && message="Press [Enter] key to continue:  "
     read -rp "$message" 
 }
@@ -35,7 +35,7 @@ function read_input() {
         *)
            printf "%s\\n" "Select an Option (1 to 3):  "
 
-           pause
+           pause "$@"
     esac
 }
 
@@ -178,7 +178,7 @@ EOF
   do 
     clear 
     show_menu
-    read_input
+    read_input "$@"
     pause
   done 
 } 
