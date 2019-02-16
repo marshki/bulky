@@ -6,6 +6,7 @@
 
 # Suspend script & display message prompt 
 # read -r (do not allow backslashes to escape any characters -p (prompt) 
+# -z (string)
 
 function pause() {
     local message="$*"
