@@ -18,7 +18,7 @@ function show_menu() {
     printf "%s\\n" "------------------------------"
         printf "%s\\n" "  1. Rename files by string"
         printf "%s\\n" "  2. Rename files extension "
-        printf "%s\\n" "  3. EXIT"
+        printf "%s\\n" "  3. Exit"
 }
 
 # Get input via the keyboard and make a decision using case...esac 
