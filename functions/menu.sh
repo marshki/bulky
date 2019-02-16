@@ -4,9 +4,9 @@
 # Suspend processing of script; display message prompting user to press [Enter] key to continue
 
 function pause() {
-    local message="$@"
+    local message="$*"
     [ -z "$message" ] && message="Press [Enter] key to continue:  "
-    read -rp "$message" readEnterKey
+    read -rp "$message"
 }
 
 # Display on-screen menu 
@@ -33,12 +33,12 @@ function read_input() {
         *)
            printf "%s\\n" "Select an Option (1 to 3):  "
 
-           pause
+           pause "$@"
     esac
 }
 
 while true
 do
     show_menu
-    read_input
+    read_input "$@"
 done
