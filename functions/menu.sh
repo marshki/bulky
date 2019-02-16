@@ -1,6 +1,7 @@
-#### Display pause prompt ####
+#!/bin/bash
+
+# Display pause prompt
 # Suspend processing of script; display message prompting user to press [Enter] key to continue
-# $1-> Message (optional)
 
 function pause() {
     local message="$@"
@@ -8,7 +9,7 @@ function pause() {
     read -rp "$message" readEnterKey
 }
 
-#### Display on-screen menu ####
+# Display on-screen menu 
 
 function show_menu() {
     date
@@ -20,7 +21,7 @@ function show_menu() {
         printf "%s\\n" "  3. EXIT"
 }
 
-#### Get input via the keyboard and make a decision using case...esac ####
+# Get input via the keyboard and make a decision using case...esac 
 
 function read_input() {
     local c
