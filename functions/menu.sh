@@ -14,10 +14,10 @@ function pause() {
 function show_menu() {
     date
     printf "%s\\n" "------------------------------"
-    printf "%s\\n" "  Bulky Main Menu             "
+    printf "%s\\n" "  BULKY Main Menu             "
     printf "%s\\n" "------------------------------"
-        printf "%s\\n" "  1. BULK RENAME BY EXTENSION"
-        printf "%s\\n" "  2. BULK RENAME BY STRING"
+        printf "%s\\n" "  1. Rename files by string"
+        printf "%s\\n" "  2. Rename files extension "
         printf "%s\\n" "  3. EXIT"
 }
 
@@ -36,6 +36,8 @@ function read_input() {
            pause "$@"
     esac
 }
+
+# while loop for user input
 
 while true
 do
