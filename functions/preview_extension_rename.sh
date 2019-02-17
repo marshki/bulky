@@ -3,7 +3,6 @@
 # For files in working directory of declared file extension
 # print file changes to be applied 
 
-
 file_ext="txt"
 find_string="long_winding"
 replace_string="yellow_brick" 
