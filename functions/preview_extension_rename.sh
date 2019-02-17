@@ -8,7 +8,7 @@ file_ext="txt"
 find_string="long_winding"
 replace_string="yellow_brick" 
 
-preview_changes() {
+preview_extension_rename() {
   printf "%s\n" "Generating preview..."
  
   for file in *"$file_ext"; do 
@@ -16,4 +16,4 @@ preview_changes() {
   done
 } 
  
-preview_changes
+preview_extension_rename
