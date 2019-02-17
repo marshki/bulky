@@ -1,9 +1,12 @@
 #!/bin/bash 
+# Preview changes
+# For files in working directory
+# print file changes tp be applied 
 
 find_string="long_winding"
 replace_string="yellow_brick" 
 
-preview_changes() {
+preview_string_rename() {
   printf "%s\n" "Generating preview..."
  
   for file in *; do 
@@ -11,4 +14,4 @@ preview_changes() {
   done
 } 
  
-preview_changes
+preview_string_rename
