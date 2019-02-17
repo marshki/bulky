@@ -53,19 +53,19 @@ show_files() {
 # Define string to find. 
 
 input_to_find() {
-  read -p "Enter the string to find: " find_string 
+  read -rp "Enter the string to find: " find_string 
 } 
 
 # Define string to replace.  
 
 input_to_replace() {
-  read -p "Enter the string to replace: " replace_string 
+  read -rp "Enter the string to replace: " replace_string 
 } 
 
 # Define file extension to search for, e.g. .csv, .html, .json, .txt.
 
 input_file_extension() {
-  read -p "Enter the extension of the files you want to modify: " file_ext
+  read -rp "Enter the extension of the files you want to modify: " file_ext
 
   file_ext=${file_ext//.}
 } 
