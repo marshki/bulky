@@ -86,7 +86,7 @@ preview_extension_rename() {
   printf "%s\n" "Generating preview..."
  
   for file in *$file_ext; do 
-    printf "%s %s \n" "$file" "-->" "${file/$find_string/$replace_string}" 
+    printf "%s %s %s\n" "$file" "-->" "${file/$find_string/$replace_string}" 
   done
 }
 
