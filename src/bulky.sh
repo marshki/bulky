@@ -47,7 +47,7 @@ show_files() {
   printf "%s\n" "Files in current directory: "
   sleep 1 
 
-  ls -Cp |grep --invert-match / 
+  find -- * -maxdepth 0 -type f
 } 
 
 # Define string to find. 
