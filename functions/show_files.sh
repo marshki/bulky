@@ -1,17 +1,13 @@
 #!/bin/bash
 # Show files in current directory 
-# ls column output, placing / after a filename that is a directory
-# grep to return non-directories (files only)
-
-# shellcheck complains about ls to grep pipe
-# find . -maxdepth 1 -type f |cut 
+# find (use -- so names with dashes will not become options with glob)
+# no deeper than current directory showing only files
 
 show_files() { 
   printf "%s\n" "Files in current directory: " 
   sleep 1.5 
 
-  ls -Cp |grep --invert-match /
-
+  find -- * -maxdepth 0 -type f
 }
 
 show_files 
