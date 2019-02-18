@@ -123,7 +123,7 @@ string_rename() {
 extension_rename() {
   printf "%s\n" "Renaming files..."
  
-  for file in *$file_ext ; do 
+  for file in *"$file_ext"; do 
     mv -v "$file" "${file/$find_string/$replace_string}"
   done
 
