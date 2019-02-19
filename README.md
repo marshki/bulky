@@ -22,3 +22,12 @@ or that MATCH a search term (by extension) for ALL files of an extension, e.g.:
 **red_white_blue_01.txt --> big_red_01.txt**
 
 **red_white_blue_02.txt --> big_red_02.txt** 
+
+
+TODO: 
+
+-[  ] Loop back if user does not confirm changes (not exit). 
+
+-[  ] Add loop back if files not found? 
+
+-[  ] Add exit code 1 to log file 
