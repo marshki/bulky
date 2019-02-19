@@ -18,5 +18,7 @@ red_white_blue_00.txt --> red_pink_blue_00.txt
 or that MATCH a search term (by extension) for ALL files of an extension, e.g.: 
 
 red_white_blue_00.txt --> big_red_00.txt 
+
 red_white_blue_01.txt --> big_red_01.txt
+
 red_white_blue_02.txt --> big_red_02.txt 
