@@ -26,10 +26,10 @@ red_white_blue_02.txt --> big_red_02.txt
 
 TODO: 
 
--[  ] Loop back if user does not confirm changes (not exit). 
+Loop back if user does not confirm changes (not exit). 
 
--[  ] Add loop back if files not found? 
+Add loop back if files not found? 
 
--[  ] Arg parse? 
+Arg parse? 
 
--[  ] Add exit code 1 to log file 
+Add exit code 1 to log file 
