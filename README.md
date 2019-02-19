@@ -10,7 +10,9 @@ BULKY finds and replaces the FIRST occurrence of a string in ALL files
 that MATCH a search term (by string), e.g.:  
 
 red_white_blue_00.csv --> red_pink_blue_00.csv
+
 red_white_blue_00.html --> red_pink_blue_00.html 
+
 red_white_blue_00.txt --> red_pink_blue_00.txt 
 
 or that MATCH a search term (by extension) for ALL files of an extension, e.g.: 
