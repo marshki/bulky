@@ -24,7 +24,12 @@ or that **MATCH** a search term (__by extension__) for ALL files of an extension
 
 **red_white_blue**_02.txt --> **big_red**_02.txt 
 
-## TODO: 
+# Getting Started
+
+Drop `bulky.sh` in the directory containing the files to be renamed, 
+then do: `bash bulky.sh`and follow on-screen prompts.  
+
+# TODO: 
 
 Loop back if user does not confirm changes (not exit). 
 
@@ -33,3 +38,11 @@ Add loop back if files not found?
 Arg parse? 
 
 Add exit code 1 to log file 
+
+# History 
+
+First commit: 2019.01.29 
+
+# License
+
+[MIT license](https://opensource.org/licenses/MIT). 'Nuff said. 
