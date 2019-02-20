@@ -8,7 +8,7 @@
 A shell script to rename files en masse. 
 
 **BULKY** finds and replaces the **FIRST** occurrence of a string in **ALL** files  
-that **MATCH** a search term (~~by string~~), e.g.:  
+that **MATCH** a search term (__by string__), e.g.:  
 
 red_white_blue_00.csv --> red_pink_blue_00.csv
 
@@ -16,7 +16,7 @@ red_white_blue_00.html --> red_pink_blue_00.html
 
 red_white_blue_00.txt --> red_pink_blue_00.txt 
 
-or that **MATCH** a search term (~~by extension~~) for ALL files of an extension, e.g.: 
+or that **MATCH** a search term (__by extension__) for ALL files of an extension, e.g.: 
 
 red_white_blue_00.txt --> big_red_00.txt
 
