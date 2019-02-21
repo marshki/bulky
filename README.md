@@ -24,12 +24,12 @@ red_white_blue_01.txt --> big_red_01.txt
 
 red_white_blue_02.txt --> big_red_02.txt 
 
-# Getting Started
+## Getting Started
 
 Drop `bulky.sh` in the directory containing the files to be renamed, 
 then do: `bash bulky.sh`and follow on-screen prompts.  
 
-# TODO: 
+## TODO
 
 Loop back if user does not confirm changes (not exit). 
 
@@ -39,10 +39,10 @@ Arg parse?
 
 Add exit code 1 to log file 
 
-# History 
+## History
 
 First commit: 2019.01.29 
 
-# License
+## License
 
 [MIT license](https://opensource.org/licenses/MIT). 'Nuff said. 
