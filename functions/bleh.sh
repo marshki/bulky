@@ -13,7 +13,7 @@ while : ; do
       printf "%s\n" "OK. Give me some more." 
 
   elif [[ "$reply" == "no" ]]; then 
-      printf "%s\n" "OK. You are free."
+      printf "%s\n" "Now, you are free."
       break 
 
   fi 
