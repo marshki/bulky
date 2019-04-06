@@ -102,8 +102,9 @@ confirm_changes() {
   if [[ "$answer" = "yes" ]]; then
       printf "%s\n" "Continuing..."
   else
-      printf "%s\n" "Exiting." 
-      exit 1
+      bulky_by_string
+      #printf "%s\n" "Exiting." 
+      #exit 1
   fi
 } 
 
