@@ -7,14 +7,15 @@
 
 A shell script to rename files en masse. 
 
-BULKY finds and replaces the FIRST occurrence of a string in ALL files  
+BULKY finds and replaces the FIRST occurrence of a string for ALL files  
 that MATCH a search term (**by string**), e.g.:  
 
-red_white_blue_00.csv --> red_pink_blue_00.csv
-
-red_white_blue_00.html --> red_pink_blue_00.html 
-
-red_white_blue_00.txt --> red_pink_blue_00.txt 
+| Find: "tale"    | Replace: "tail" | 
+|-----------------|-----------------|
+| bards_tale.csv  | bards_tail.csv  | 
+| bards_tale.html | bards_tail.html | 
+| bards_tale.json | bards_tail.json | 
+| bards_tale.txt  | bards_tail.txt  | 
 
 or that MATCH a search term (**by extension**) for ALL files of an extension, e.g.: 
 
