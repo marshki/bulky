@@ -90,18 +90,23 @@ preview_extension_rename() {
   done
 }
 
-# Confirm changes are acceptable; exit if not yes.  
+# Confirm changes are acceptable; exit if not yes or menu.  
 
 confirm_changes() { 
-  read -p "Replace:'$find_string' with:'$replace_string'(YES/NO)? " answer 
+  read -p "Replace:'$find_string' with:'$replace_string'(YES/NO/MENU)? " answer 
 
   answer=$(printf "%s" "$answer"| tr '[:upper:]' '[:lower:]')
    
   if [[ "$answer" = "yes" ]]; then
       printf "%s\n" "Continuing..."
+
+  elif [[ "$answer" = "no" ]]; then
+      printf "%s\n" "Exiting..."
+      exit 1 
+
   else
-      printf "%s\n" "Exiting." 
-      exit 1
+      printf "%s\n" "Returning to Main Menu..." 
+      main 
   fi
 } 
 
