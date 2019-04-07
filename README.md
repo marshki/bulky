@@ -31,8 +31,6 @@ then do: `bash bulky.sh`and follow on-screen prompts.
 
 ## TODO
 
-Loop back if user does not confirm changes (not exit). 
-
 Add loop back if files not found? 
 
 Arg parse? 
