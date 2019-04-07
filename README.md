@@ -12,10 +12,10 @@ that MATCH a search term (**by string**), e.g.:
 
 | Find: "tale"    | Replace: "tail" | 
 |-----------------|-----------------|
-| bards_tale.csv  | bards_tail.csv  | 
-| bards_tale.html | bards_tail.html | 
-| bards_tale.json | bards_tail.json | 
-| bards_tale.txt  | bards_tail.txt  | 
+| tall_tales.csv  | tall_tails.csv  | 
+| tall_tales.html | tall_tails.html | 
+| tall_tales.json | tall_tails.json | 
+| tall_tales.txt  | tall_tails.txt  | 
 
 or that MATCH a search term (**by extension**) for ALL files of an extension, e.g.: 
 
