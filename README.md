@@ -33,8 +33,6 @@ then do: `bash bulky.sh`and follow on-screen prompts.
 
 Add loop back if files not found? 
 
-Arg parse? 
-
 Add exit code 1 to log file 
 
 ## History
