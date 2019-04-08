@@ -10,12 +10,12 @@ A shell script to rename files en masse.
 BULKY finds and replaces the FIRST occurrence of a string in ALL file names 
 that CONTAIN that string, e.g.: 
 
-| Find: "tale"    | Replace: "tail" |
-|-----------------|-----------------|
-| tall_tales.csv  | tall_tails.csv  | 
-| tall_tales.html | tall_tails.html | 
-| tall_tales.json | tall_tails.json | 
-| tall_tales.txt  | tall_tails.txt  | 
+| Find: "tale"    |    | Replace: "tail" |
+|-----------------|----|-----------------|
+| tall_tales.csv  | -->| tall_tails.csv  | 
+| tall_tales.html | -->| tall_tails.html | 
+| tall_tales.json | -->| tall_tails.json | 
+| tall_tales.txt  | -->| tall_tails.txt  | 
 
 BULKY can also find/replace the FIRST occurrence of a string in ALL file names 
 that CONTAIN that string and END WITH a specific file extension, e.g.: 
