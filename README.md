@@ -23,7 +23,7 @@ that CONTAIN that string and END WITH a specific file extension, e.g.:
 | Ext: txt  | Find: "tale"     | Replace: "tail"  |
 |-----------|------------------|------------------|
 |           | duck_tales.html  | duck_tales.html  | 
-|      -->  | fairy_tales.txt  | fairy_tail.txt   | 
+|      -->  | fairy_tales.txt  | fairy_tails.txt  | 
 |      -->  | tall_tales.txt   | tall_tails.txt   | 
 |      -->  | whales_tales.txt | whales_tails.txt | 
 
