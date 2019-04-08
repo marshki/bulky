@@ -7,8 +7,8 @@
 
 A shell script to rename files en masse. 
 
-BULKY finds and replaces the FIRST occurrence of a string for ALL files  
-that MATCH a search term (**by string**), e.g.:  
+BULKY finds and replaces the FIRST occurrence of a string in ALL file names 
+that CONTAIN that string, e.g.: 
 
 | Find: "tale"    | Replace: "tail" |
 |-----------------|-----------------|
@@ -17,13 +17,7 @@ that MATCH a search term (**by string**), e.g.:
 | tall_tales.json | tall_tails.json | 
 | tall_tales.txt  | tall_tails.txt  | 
 
-or that MATCH a search term (**by extension**) for ALL files of an extension, e.g.: 
-
-red_white_blue_00.txt --> big_red_00.txt
-
-red_white_blue_01.txt --> big_red_01.txt
-
-red_white_blue_02.txt --> big_red_02.txt 
+BULKY can also limit itself to renaming files of a specific file extension, e.g.:  
 
 ## Getting Started
 
