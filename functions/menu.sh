@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Display pause prompt
 # Suspend processing of script; display message prompting user to press [Enter] key to continue
 

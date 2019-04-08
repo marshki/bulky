@@ -1,6 +1,5 @@
 #!/bin/bash 
 # Pause function. 
-
 # For reference: 
 # https://unix.stackexchange.com/questions/134437/press-space-to-continue
 
