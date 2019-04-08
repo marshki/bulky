@@ -23,10 +23,10 @@ that CONTAIN that string and END WITH a specific file extension, e.g.:
 | Ext: txt | Find: "tale"     |    | Replace: "tail"  |
 |----------|------------------|----|------------------|
 |          | duck_tales.html  |    | duck_tales.html  | 
-| - [x]    | fairy_tales.txt  | -->| fairy_tails.txt  | 
-|          | snails_tales.csv |    |                  |
-| - [x]    | tall_tales.txt   | -->| tall_tails.txt   | 
-| - [x]    | whales_tales.txt | -->| whales_tails.txt | 
+|  [x]     | fairy_tales.txt  | -->| fairy_tails.txt  | 
+|          | snails_tales.csv |    | snails_tales.csv |
+|  [x]     | tall_tales.txt   | -->| tall_tails.txt   | 
+|  [x]     | whales_tales.txt | -->| whales_tails.txt | 
 
 ## Getting Started
 
