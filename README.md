@@ -17,7 +17,15 @@ that CONTAIN that string, e.g.:
 | tall_tales.json | tall_tails.json | 
 | tall_tales.txt  | tall_tails.txt  | 
 
-BULKY can also limit itself to renaming files of a specific file extension, e.g.:  
+BULKY can also find/replace the FIRST occurrence of a string in ALL file names 
+that CONTAIN that string and END WITH a specific file extension, e.g.: 
+
+| Ext: txt  | Find: "tale"     | Replace: "tail"  |
+|-----------|------------------|------------------|
+|           | duck_tales.html  | duck_tales.html  | 
+|      -->  | fairy_tales.txt  | fairy_tail.txt   | 
+|      -->  | tall_tales.txt   | tall_tails.txt   | 
+|      -->  | whales_tales.txt | whales_tails.txt | 
 
 ## Getting Started
 
