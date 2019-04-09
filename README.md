@@ -20,7 +20,7 @@ that CONTAIN that string, e.g.:
 BULKY can also find/replace the FIRST occurrence of a string in ALL file names 
 that CONTAIN that string and END WITH a specific file extension, e.g.: 
 
-| Find: "tale"     | Extension: txt   | Replace: "tail"  |
+| Find: "tale"     | Extension: "txt" | Replace: "tail"  |
 |------------------|------------------|------------------|
 | duck_tales.html  |                  | duck_tales.html  | 
 | fairy_tales.txt  |            -->   | fairy_tails.txt  | 
