@@ -1,5 +1,4 @@
 #!/bin/bash 
-
 # Get input via keyboard and make a decision using case...esac. 
 # read -r (do not allow backslashes to escape any characters) -p (prompt)  
 

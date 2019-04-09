@@ -1,5 +1,4 @@
 #!/bin/bash 
-
 # Prompt user for confirmation; exit if not "yes" or "menu"
 # Pipe reply to tr to convert to lower case . 
 # Even though we ask for "UPPERCASE" we will accept, 

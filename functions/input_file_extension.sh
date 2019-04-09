@@ -1,5 +1,4 @@
 #!/bin/bash 
-
 # Prompt to define file_type.  
 # If present, strip "." then reassign output to file_type 
 
