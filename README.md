@@ -35,9 +35,7 @@ then do: `bash bulky.sh`and follow on-screen prompts.
 
 ## TODO
 
-Add loop back if files not found? 
-
-Add exit code 1 to log file 
+Include log files showing changes made, as well as exit code? 
 
 ## History
 
