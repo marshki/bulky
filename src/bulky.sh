@@ -70,7 +70,7 @@ input_file_extension() {
   file_ext=${file_ext//.}
 } 
 
-# Preview changes for bulk rename by find string.
+# Preview changes for bulk rename by string.
  
 preview_string_rename() {
   printf "%s\n" "Generating preview..."
@@ -163,18 +163,26 @@ main() {
 
 BULKY: A shell script to rename files en masse. 
 
-BULKY finds and replaces the FIRST occurrence of a string in ALL files  
-that MATCH a search term (by string), e.g.:  
+BULKY finds and replaces the FIRST occurrence of a string in ALL file names 
+that CONTAIN that string, e.g.: 
 
-red_white_blue_00.csv --> red_pink_blue_00.csv
-red_white_blue_00.html --> red_pink_blue_00.html 
-red_white_blue_00.txt --> red_pink_blue_00.txt 
+| Find: "tale"     | Replace: "tail"  |
+|------------------|------------------|
+| tall_tales.csv   | tall_tails.csv   | 
+| tall_tales.html  | tall_tails.html  | 
+| tall_tales.json  | tall_tails.json  | 
+| tall_tales.txt   | tall_tails.txt   | 
 
-or that MATCH a search term (by extension) for ALL files of an extension, e.g.: 
+BULKY can also find/replace the FIRST occurrence of a string in ALL file names 
+that CONTAIN that string and END WITH a specific file extension, e.g.: 
 
-red_white_blue_00.txt --> big_red_00.txt 
-red_white_blue_01.txt --> big_red_01.txt
-red_white_blue_02.txt --> big_red_02.txt
+| Find: "tale"     | Extension: "txt" | Replace: "tail"  |
+|------------------|------------------|------------------|
+| duck_tales.html  |                  | duck_tales.html  | 
+| fairy_tales.txt  |            -->   | fairy_tails.txt  | 
+| snails_tales.csv |                  | snails_tales.csv |
+| tall_tales.txt   |            -->   | tall_tails.txt   | 
+| whales_tales.txt |            -->   | whales_tails.txt | 
 
 EOF
   pause 
