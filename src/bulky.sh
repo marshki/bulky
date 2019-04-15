@@ -33,7 +33,7 @@ function read_input() {
     case $c in
         1) bulky_by_string ;;
         2) bulky_by_extension ;;
-        3) printf "%s\n" "Ciao!"; exit 0 ;;
+        3) printf "\n%s\n" "Ciao!"; exit 0 ;;
         *)
            printf "%s\n" "Select an Option (1 to 3):  "
 
