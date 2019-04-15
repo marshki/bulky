@@ -113,7 +113,7 @@ Replace:'$find_string' with:'$replace_string'(YES/NO/MENU)? " answer
       exit 1 
 
   else
-      printf "\n%s\n\n" "Returning to Main Menu..." 
+      printf "\n%s\n" "Returning to Main Menu..." 
       main 
   fi
 } 
