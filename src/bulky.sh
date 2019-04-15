@@ -1,7 +1,9 @@
 #!/bin/bash 
 # mjk235 [at] nyu [dot] edu
 
-#### MENU ####
+#=========
+# MENU 
+#=========
 
 # Pause function. 
 
@@ -15,12 +17,12 @@ function pause() {
 
 function show_menu() {
     date
-    printf "%s\\n" "------------------------------"
-    printf "%s\\n" "  BULKY: Main Menu            "
-    printf "%s\\n" "------------------------------"
-        printf "%s\\n" "  1. Rename files by string"
-        printf "%s\\n" "  2. Rename files by extension"
-        printf "%s\\n" "  3. Exit"
+    printf "%s\n" "------------------------------"
+    printf "%s\n" "  BULKY: Main Menu            "
+    printf "%s\n" "------------------------------"
+        printf "%s\n" "  1. Rename files by string"
+        printf "%s\n" "  2. Rename files by extension"
+        printf "%s\n" "  3. Exit"
 }
 
 # Get input via keyboard and make a decision using case...esac. 
@@ -31,20 +33,22 @@ function read_input() {
     case $c in
         1) bulky_by_string ;;
         2) bulky_by_extension ;;
-        3) printf "%s\\n" "Ciao!"; exit 0 ;;
+        3) printf "%s\n" "Ciao!"; exit 0 ;;
         *)
-           printf "%s\\n" "Select an Option (1 to 3):  "
+           printf "%s\n" "Select an Option (1 to 3):  "
 
            pause "$@"
     esac
 }
 
-#### BULKY #### 
+#=========
+# BULKY
+#=========
 
 # Show files in current working directory. 
 
-show_files() { 
-  printf "%s\n" "Files in current directory: "
+show_files() {
+  printf "\n%s\n\n" "Files in current directory: "
   sleep 1 
 
   find -- * -maxdepth 0 -type f
@@ -53,19 +57,22 @@ show_files() {
 # Define string to find. 
 
 input_to_find() {
-  read -rp "Enter the string to find: " find_string 
+  read -rp "
+Enter the string to find: " find_string 
 } 
 
 # Define string to replace.  
 
 input_to_replace() {
-  read -rp "Enter the string to replace: " replace_string 
+  read -rp "
+Enter the string to replace: " replace_string 
 } 
 
 # Define file extension to search for, e.g. .csv, .html, .json, .txt.
 
 input_file_extension() {
-  read -rp "Enter the extension of the files you want to modify: " file_ext
+  read -rp "
+Enter the extension of the files you want to modify: " file_ext
 
   file_ext=${file_ext//.}
 } 
@@ -73,7 +80,7 @@ input_file_extension() {
 # Preview changes for bulk rename by string.
  
 preview_string_rename() {
-  printf "%s\n" "Generating preview..."
+  printf "\n%s\n\n" "Generating preview..."
  
   for file in *; do 
     printf "%s %s %s\n" "$file" "-->" "${file/$find_string/$replace_string}" 
@@ -83,7 +90,7 @@ preview_string_rename() {
 # Preview changes for bulk rename by extension. 
 
 preview_extension_rename() {
-  printf "%s\n" "Generating preview..."
+  printf "\n%s\n\n" "Generating preview..."
  
   for file in *"$file_ext"; do 
     printf "%s %s %s\n" "$file" "-->" "${file/$find_string/$replace_string}" 
@@ -93,19 +100,20 @@ preview_extension_rename() {
 # Confirm changes are acceptable; exit if not yes or menu.  
 
 confirm_changes() { 
-  read -p "Replace:'$find_string' with:'$replace_string'(YES/NO/MENU)? " answer 
+  read -rp "
+Replace:'$find_string' with:'$replace_string'(YES/NO/MENU)? " answer 
 
   answer=$(printf "%s" "$answer"| tr '[:upper:]' '[:lower:]')
    
   if [[ "$answer" = "yes" ]]; then
-      printf "%s\n" "Continuing..."
+      printf "\n%s\n\n" "Continuing..."
 
   elif [[ "$answer" = "no" ]]; then
-      printf "%s\n" "Exiting..."
+      printf "\n%s\n\n" "Exiting..."
       exit 1 
 
   else
-      printf "%s\n" "Returning to Main Menu..." 
+      printf "\n%s\n\n" "Returning to Main Menu..." 
       main 
   fi
 } 
@@ -113,29 +121,31 @@ confirm_changes() {
 # Replace 1st occurrence of "find_string" with "replace_string" in all files. 
 
 string_rename() {
-  printf "%s\n" "Renaming files..."
+  printf "\n%s\n\n" "Renaming files..."
  
   for file in *; do 
     mv -v "$file" "${file/$find_string/$replace_string}"
   done
 
-  printf "%s\n" "Done."
+  printf "\n%s\n\n" "Done."
 } 
 
 # Replace 1st occurrence of "find_string" with "replace_string"
 # for files of defined extension.  
 
 extension_rename() {
-  printf "%s\n" "Renaming files..."
+  printf "\n%s\n\n" "Renaming files..."
  
   for file in *"$file_ext"; do 
     mv -v "$file" "${file/$find_string/$replace_string}"
   done
 
-  printf "%s\n" "Done."
+  printf "\n%s\n\n" "Done."
 }
 
-#### WRAPPERS ####
+#=========
+# WRAPPERS
+#=========
 
 bulky_by_string() { 
   show_files
@@ -156,7 +166,9 @@ bulky_by_extension() {
   extension_rename
 } 
 
-#### MAIN #### 
+#========= 
+# MAIN
+#========= 
 
 main() {
   cat << EOF
