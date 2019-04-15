@@ -121,7 +121,7 @@ Replace:'$find_string' with:'$replace_string'(YES/NO/MENU)? " answer
 # Replace 1st occurrence of "find_string" with "replace_string" in all files. 
 
 string_rename() {
-  printf "\n%s\n\n" "Renaming files..."
+  printf "%s\n\n" "Renaming files..."
  
   for file in *; do 
     mv -v "$file" "${file/$find_string/$replace_string}"
