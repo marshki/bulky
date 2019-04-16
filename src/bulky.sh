@@ -36,7 +36,6 @@ function read_input() {
         3) printf "\n%s\n" "Ciao!"; exit 0 ;;
         *)
            printf "%s\n" "Select an Option (1 to 3):  "
-
            pause "$@"
     esac
 }
