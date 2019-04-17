@@ -26,16 +26,9 @@ log moe
 log curly
 log shemp
 log curly joe
-
 #log bleh
 #log hello this is a log
 #log hello this is a log, too
 #log hello this is a log, three
 #log hello this is a log, four
 #log hello this is a log, five
-#log bleh, bleh
-#log hello this is a log, six
-#log hello this is a log, seven
-#log hello this is a log, eight
-#log hello this is a log, nine
-#log hello this is a log, ten
