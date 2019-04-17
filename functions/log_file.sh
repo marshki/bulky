@@ -5,7 +5,7 @@ LOGFILE=bulky.sh.log
 RETAIN_NUM_LINES=10
 
 # log_setup: output num of lines from "RETAIN" and send to /dev/null
-#          : print output of variable to "LOGFILE" 
+#          : print output of TMP to "LOGFILE" 
 #          : within process append output to file (do not overwrite) 
 #          : within process redirect standard error to standard out 
 
