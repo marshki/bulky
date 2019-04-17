@@ -7,7 +7,7 @@
 
 # Pause function. 
 
-function pause() {
+pause() {
     local message="$*"
     [ -z "$message" ] && message="Press [Enter] key to continue:  "
     read -rp "$message" 
@@ -15,7 +15,7 @@ function pause() {
 
 # On-screen menu.
 
-function show_menu() {
+show_menu() {
     date
     printf "%s\n" "------------------------------"
     printf "%s\n" "  BULKY: Main Menu            "
@@ -27,7 +27,7 @@ function show_menu() {
 
 # Get input via keyboard and make a decision using case...esac. 
 
-function read_input() {
+read_input() {
     local c
     read -rp "Enter your choice [ 1-3 ]:  " c
     case $c in
