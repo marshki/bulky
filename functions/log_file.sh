@@ -4,6 +4,8 @@
 LOGFILE=bulky.sh.log
 RETAIN_NUM_LINES=10
 
+# add comments here
+
 logsetup () {
   TMP=$(tail -n $RETAIN_NUM_LINES $LOGFILE 2>/dev/null) && printf "%s\n" "${TMP}" > $LOGFILE
   exec > >(tee -a $LOGFILE)
