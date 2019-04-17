@@ -1,9 +1,6 @@
 #!/bin/bash
 # Custom log file
 
-# TIMESTAMP=$(date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S")
-# printf "%s\n" "$TIMESTAMP"
-
 LOGFILE=bulky.sh.log
 RETAIN_NUM_LINES=10
 
@@ -14,7 +11,7 @@ logsetup () {
 }
 
 log () {
-    printf "%s" "[$(date --rfc-3339=seconds)]: $*"
+    printf "%s\n" "[$(date)]: $*"
 }
 
 logsetup
