@@ -1,5 +1,7 @@
 #!/bin/bash
 # Custom log file
+# For reference: https://www.linuxquestions.org/questions/programming-9/how-to-create-log-file-from-script-351459
+
 
 LOGFILE=bulky.sh.log
 RETAIN_NUM_LINES=10
