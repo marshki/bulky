@@ -7,7 +7,7 @@
 # read -r (do not allow backslashes to escape any characters -p (prompt) 
 # -z (string)
 
-function pause() {
+pause() {
     local message="$*"
     [ -z "$message" ] && message="Press [Enter] key to continue:  "
     read -rp "$message"
