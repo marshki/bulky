@@ -135,7 +135,7 @@ string_rename() {
   printf "%s\n\n" "Renaming files..."
  
   for file in *; do 
-    mv -v "$file" "${file/$find_string/$replace_string}"
+    log "$(mv -v "$file" "${file/$find_string/$replace_string}")"   
   done
 
   printf "\n%s\n\n" "Done."
