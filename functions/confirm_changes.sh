@@ -1,8 +1,8 @@
 #!/bin/bash 
 # Prompt user for confirmation; exit if not "yes" or "menu"
 # Pipe reply to tr to convert to lower case . 
-# Even though we ask for "UPPERCASE" we will accept, 
-# e.g. upper, UpPeRcAsE, UPPERCASE.
+# Even though we ask for "UPPERCASE" we will accept: 
+# upper, UpPeRcAsE, UPPERCASE, e.g.
 
 confirm_changes() { 
   read -rp "Replace: 'this' with: 'that'(YES/NO/MENU)? " answer 
