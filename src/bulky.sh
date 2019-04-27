@@ -1,6 +1,18 @@
 #!/bin/bash 
 # mjk235 [at] nyu [dot] edu
 
+LOG_FILE="bulky.sh.log"
+
+#=========
+# LOG
+#=========
+
+# Write changes w/ timestamp to LOG_FILE for tracking. 
+
+log () {
+  printf "%s\n" "$(date +"%b %d %X :") $*" |tee -a "$LOG_FILE"
+}
+
 #=========
 # MENU 
 #=========
