@@ -28,6 +28,8 @@ that CONTAIN that string and END WITH a specific file extension, e.g.:
 | tall_tales.txt   |            -->   | tall_tails.txt   | 
 | whales_tales.txt |            -->   | whales_tails.txt | 
 
+BULKY logs changes made to: `bulky.sh.log` with a time stamp for reference. 
+
 ## Getting Started
 
 Drop `bulky.sh` in the directory containing the files to be renamed, 
