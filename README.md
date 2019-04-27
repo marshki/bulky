@@ -33,10 +33,6 @@ that CONTAIN that string and END WITH a specific file extension, e.g.:
 Drop `bulky.sh` in the directory containing the files to be renamed, 
 then do: `bash bulky.sh`and follow on-screen prompts.  
 
-## TODO
-
-Include log files showing changes made, as well as exit code? 
-
 ## History
 
 First commit: 2019.01.29 
