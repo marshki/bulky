@@ -7,6 +7,8 @@
 
 A shell script to rename files en masse. 
 
+![Animated SVG](https://rawcdn.githack.com/marshki/BULKY/d3fe140f605f8ad5b164c20d9545cf22ebf3829d/docs/tmpipzjsqoq-ascii.cast)
+
 BULKY finds and replaces the FIRST occurrence of a string in ALL file names 
 that CONTAIN that string, e.g.: 
 
