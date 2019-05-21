@@ -30,8 +30,6 @@ that CONTAIN that string and END WITH a specific file extension, e.g.:
 
 BULKY logs changes made to: `bulky.sh.log` in the `pwd` with a time stamp. 
 
-[![asciicast](https://asciinema.org/a/h6jdIguWPw3N9PpCmJSIAsufo.png)](https://asciinema.org/a/h6jdIguWPw3N9PpCmJSIAsufo)
-
 ## Getting Started
 
 Drop `bulky.sh` in the directory containing the files to be renamed, 
