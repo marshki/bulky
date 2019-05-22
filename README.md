@@ -7,8 +7,6 @@
 
 A shell script to rename files en masse. 
 
-![Animated SVG](https://rawcdn.githack.com/marshki/BULKY/b72e981c053d96863da29073841b72dcdb7f6165/docs/termtosvg_gqij5l2b.svg)
-
 BULKY finds and replaces the FIRST occurrence of a string in ALL file names 
 that CONTAIN that string, e.g.: 
 
@@ -31,6 +29,8 @@ that CONTAIN that string and END WITH a specific file extension, e.g.:
 | whales_tales.txt |            -->   | whales_tails.txt | 
 
 BULKY logs changes made to: `bulky.sh.log` in the `pwd` with a time stamp. 
+
+![Animated SVG](https://rawcdn.githack.com/marshki/BULKY/b72e981c053d96863da29073841b72dcdb7f6165/docs/termtosvg_gqij5l2b.svg)
 
 ## Getting Started
 
