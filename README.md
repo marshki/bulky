@@ -34,8 +34,9 @@ BULKY logs changes made to: `bulky.sh.log` in the `pwd` with a time stamp.
 
 ## Getting Started
 
-Drop `bulky.sh` in the directory containing the files to be renamed, 
-then do: `bash bulky.sh`and follow on-screen prompts.  
+Set permissions on the file: `chmod +x bulky.sh` and drop the file in: 
+`/usr/local/bin`, then from the directory containing the files you want to rename, 
+do: `bash bulky.sh`, and follow the on-screen prompts.  
 
 ## History
 
