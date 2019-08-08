@@ -41,6 +41,7 @@ do: `bash bulky.sh`, and follow the on-screen prompts.
 ## History
 
 First commit: 2019.01.29 
+Final commit: 2019.06.29
 
 ## License
 
