@@ -1,11 +1,18 @@
-#!/bin/bash 
-# mjk235 [at] nyu [dot] edu
+#!/usr/bin/env bash 
+# 
+# bulky
+# 
+# Shell script to rename files en masse. 
+#
+# Author M. Krinitz <mjk235 [at] nyu [dot] edu>
+# Date: 
+# License: MIT
 
 LOG_FILE="bulky.sh.log"
 
-#=========
+#####
 # LOG
-#=========
+#####
 
 # Write changes w/ timestamp to LOG_FILE for tracking. 
 
@@ -13,9 +20,9 @@ log () {
   printf "%s\n" "$(date +"%b %d %X :") $*" |tee -a "$LOG_FILE"
 }
 
-#=========
+######
 # MENU 
-#=========
+######
 
 # Pause function. 
 
@@ -52,9 +59,9 @@ read_input() {
     esac
 }
 
-#=========
+#######
 # BULKY
-#=========
+#######
 
 # Show files in current working directory. 
 
@@ -154,9 +161,9 @@ extension_rename() {
   printf "\n%s\n\n" "Done."
 }
 
-#=========
+##########
 # WRAPPERS
-#=========
+##########
 
 bulky_by_string() { 
   show_files
@@ -177,9 +184,9 @@ bulky_by_extension() {
   extension_rename
 } 
 
-#========= 
+###### 
 # MAIN
-#========= 
+######
 
 main() {
   cat << EOF
